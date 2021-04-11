@@ -6,7 +6,7 @@ import { act } from 'react-dom/test-utils';
 
 describe('Componente principal', () => {
     describe('Quando eu abro o app do banco...', () => {
-        it('o nome é exibido', () => {
+        test('o nome é exibido', () => {
             render(<App/>);
             expect(screen.getByText('ByteBank')).toBeInTheDocument();
         })
@@ -32,16 +32,12 @@ describe('Componente principal', () => {
             expect(novoSaldo).toBe(100);
         })
         it('que é um saque, a transação será realizada', () => {
-            const { 
-                getByText, 
-                getByTestId, 
-                getByLabelText 
-            } = render(<App/>);
+            render(<App/>);
 
-            const saldo = getByText('R$ 1000');
-            const transacao = getByLabelText('Saque');
-            const valor = getByTestId('valor');
-            const botao = getByText('Realizar operação');
+            const saldo = screen.getByText('R$ 1000');
+            const transacao = screen.getByLabelText('Saque');
+            const valor = screen.getByTestId('valor');
+            const botao = screen.getByText('Realizar operação');
             
             expect(saldo.textContent).toBe('R$ 1000');
             

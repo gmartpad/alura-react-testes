@@ -116,6 +116,24 @@
       "valor": "10",
       "data": "11/04/2021",
       "id": 19
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "11/04/2021",
+      "id": 20
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "11/04/2021",
+      "id": 21
+    },
+    {
+      "transacao": "saque",
+      "valor": "10",
+      "data": "11/04/2021",
+      "id": 22
     }
   ]
 }
